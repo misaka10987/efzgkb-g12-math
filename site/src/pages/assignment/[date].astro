@@ -1,0 +1,49 @@
+---
+import type { GetStaticPaths } from 'astro'
+import path from 'path'
+import fs from 'fs'
+import Markdown from '@/components/Markdown.astro'
+import { ActionError } from 'astro:actions'
+import Layout from '@/layouts/Layout.astro'
+
+export const getStaticPaths = (() => {
+  const dir = path.resolve('src/content/assignment')
+  const dates = fs
+    .readdirSync(dir)
+    .filter((name) => fs.statSync(path.join(dir, name)).isDirectory())
+
+  return dates.map((date) => ({
+    params: { date },
+  }))
+}) satisfies GetStaticPaths
+
+const { date } = Astro.params
+
+const post = await (async () => {
+  try {
+    return await import(`@/content/assignment/${date}/index.md`)
+  } catch (e) {
+    throw new ActionError({ code: 'NOT_FOUND' })
+  }
+})()
+
+const title = `作业 ${date}`
+---
+
+<Layout>
+  <slot slot="head">
+    <title>{title}</title>
+  </slot>
+  <article class="m-4">
+    <h1>{title}</h1>
+    <p>此页面提供 <strong>{title}</strong> 有关资料。</p>
+    <p>
+      此作业的试题 PDF 提供于以下
+      <a href=`/content/assignment/${date}/problem.pdf`>链接</a>。
+    </p>
+    <p>答案见下。</p>
+    <section>
+      <Markdown file={post} />
+    </section>
+  </article>
+</Layout>

@@ -1,0 +1,29 @@
+---
+import { getStaticPaths } from './[date].astro'
+import Layout from '@/layouts/Layout.astro'
+
+const entries = getStaticPaths().map((x) => x.params.date)
+---
+
+<Layout>
+  <slot slot="head">
+    <title>作业</title>
+  </slot>
+  <div class="m-4">
+    <article>
+      <h1>作业</h1>
+      <h2>所有作业的目录</h2>
+      <div>
+        <ul>
+          {
+            entries.map((e) => (
+              <li>
+                <a href={e}>{e}</a>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+    </article>
+  </div>
+</Layout>

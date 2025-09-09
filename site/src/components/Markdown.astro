@@ -1,0 +1,18 @@
+---
+interface Props {
+  // TODO: add type
+  file: any
+}
+
+const { file } = Astro.props
+---
+
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css"
+/>
+
+<article class="m-4 p-4 border-black border">
+  <file.Content />
+  <div class="text-sm">Above Rendered from Markdown</div>
+</article>
