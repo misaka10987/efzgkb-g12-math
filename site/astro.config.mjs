@@ -1,5 +1,5 @@
 // @ts-check
-import { defineConfig } from 'astro/config'
+import { defineConfig, passthroughImageService } from 'astro/config'
 import remarkMath from 'remark-math'
 import rehypeKatex from 'rehype-katex'
 import path from 'path'
@@ -10,6 +10,9 @@ export default defineConfig({
   site: 'https://misaka10987.github.io',
   base: '/site-efzgkb-g12-math',
   trailingSlash: 'always',
+  image: {
+    service: passthroughImageService(),
+  },
   vite: {
     resolve: {
       alias: {
