@@ -9,7 +9,15 @@ interface Props {
 const { file } = Astro.props
 ---
 
-<article class="m-4 p-4 border-black border">
+<style is:global>
+  .markdown img {
+    max-width: 100%;
+    width: auto;
+    height: auto;
+  }
+</style>
+
+<article class="m-4 p-4 markdown">
   <file.Content />
   <div class="text-sm">Above Rendered from Markdown</div>
 </article>
