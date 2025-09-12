@@ -11,13 +11,13 @@ importers:
       astro:
         specifier: ^5.13.6
         version: 5.13.6(@types/node@24.3.1)(jiti@2.5.1)(rollup@4.50.1)(typescript@5.9.2)
-      katex:
-        specifier: ^0.16.22
-        version: 0.16.22
     devDependencies:
       '@astrojs/markdown-remark':
         specifier: ^6.3.6
         version: 6.3.6
+      katex:
+        specifier: ^0.16.22
+        version: 0.16.22
       rehype-katex:
         specifier: ^7.0.1
         version: 7.0.1
