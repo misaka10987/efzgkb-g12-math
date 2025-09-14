@@ -26,9 +26,9 @@ Homework 3
    0 & 0 & 1\\
    1 & 0 & 0\end{pmatrix}$ .
 
-   $QP = \begin{pmatrix}0 & 1 & 0\\
-   0 & 0 & 1\\
-   1 & 0 & 0\end{pmatrix}$ .
+   $QP = \begin{pmatrix}0 & 0 & 1\\
+   1 & 0 & 0\\
+   0 & 1 & 0\end{pmatrix}$ .
 
    $P^2 = \mathbf{1}_3$ .
 
@@ -39,8 +39,8 @@ Homework 3
 
    $F = \begin{pmatrix}1 & 0 & 0 & 0\\
    \mathop{-}1 & 1 & 0 & 0\\
-   0 & \mathop{-}1 & 1 & 0\\
-   0 & 0 & \mathop{-}1 & 1\end{pmatrix}$ .
+   1 & \mathop{-}2 & 1 & 0\\
+   \mathop{-}1 & 3 & \mathop{-}3 & 1\end{pmatrix}$ .
 
 6. $M=ABAAB$ .
 
