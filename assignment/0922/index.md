@@ -81,3 +81,28 @@ Homework 4
    c. Plot.
 
    ![Plot](opt2.jpg)
+
+3. (1)(2) **证明**
+
+   不妨令 $A : \R ^{n \times n}$ 是上三角矩阵。
+
+   $(A^k)_{i,i} = (A_{i,i})^k$ , $A^k = \mathbf 0 \implies A_{i,i} = 0 \space \forall i$ .
+
+   展开 $A^n$
+
+   $$
+   \begin{equation}
+   (A^n)_{i, j} = \sum_{i_1, i_2, \cdots, i_{n-1}}
+   A_{i, i_1} A_{i_1, i_2} \cdots A_{i_{n-1}, j}
+   \end{equation}
+   $$
+
+   如果 $A$ 的主对角线均为 $0$ , 由于 $A$ 是上三角矩阵
+
+   $$
+   A_{i, j} \ne 0 \implies i < j
+   $$
+
+   由于 $i,j : \N^* \le n$ , 不可能找到连续上升的 $n + 1$ 个下标 $i, i_1, i_2, \cdots, j$ . 故至少一项 $A_{i_k, i_{k+1}} = 0$ . 因此求和 (1) 的每一项均为 $0$ , $(A^n)_{i, j} = 0$ , $A^n = \mathbf 0_{n \times n}$ $\square$ .
+
+   (3) **证明** $(A^k)^n = \mathbf 0_{n \times n}$ $\square$ .
