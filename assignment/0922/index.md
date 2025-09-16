@@ -39,10 +39,15 @@ Homework 4
    $\operatorname{rank}(A | \vec c) = 3$ or $4$ , then $\operatorname{rank}(A) \le \operatorname{rank}(A | \vec c)$ , and the system has either one or no solution.
 
 5. (a) Infinitely many.
+
    Because $\operatorname{rank}(A)=n$ , $A$ has right inverse.
+
    Therefore $AA^+ = \mathbf 1_n$ .
+
    **Lemma 1** $\forall X : \R^{m \times n}$ , $A (A^+ + (\mathbf 1_m - A^+A)X) = \mathbf 1_n$ .
+
    **Proof**
+
    $$
    \begin{align*}
    A (A^+ + (\mathbf 1_m - A^+ A) X) \\
@@ -52,6 +57,27 @@ Homework 4
    & = \mathbf 1_n
    \end{align*}
    $$
+
    $\square$ .
+
    By lemma 1, obviously there are infinitely many right inverse of $A$ .
+
    (b) Only $A^{-1}$ .
+
+## Optional
+
+1. a. $\vec x = \mathbf 0$ is a solution.
+
+   b. $\operatorname{rank}(A) = \operatorname{rank}(A|\vec 0) \lt \text{number of variables}$ .
+
+   c. $A (\vec x_1 + \vec x_2) = A \vec x_1 + A \vec x_2 = \vec 0$ .
+
+   d. $A(k \vec x) = k(A \vec x) = \vec 0$ .
+
+2. a. $A (\vec x_1 + \vec x_h) = A \vec x_1 + A \vec x_h = \vec b + \vec 0 = \vec  b$ .
+
+   b. $A (\vec x_2 - \vec x_1) = A \vec x_2 - A \vec x_1 = \vec b - \vec b = \vec 0 $ .
+
+   c. Plot.
+
+   ![Plot](opt2.jpg)
