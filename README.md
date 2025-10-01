@@ -8,6 +8,6 @@
 
 ## 作业
 
-本站收录所有作业问题与答案。答案系作者个人编写，如有错漏，请见谅。您也可以联系作者改正，或在本站的 [GitHub](https://github.com/misaka10987/efzgkb-g12-math) 页面 [创建](github.com/misaka10987/efzgkb-g12-math/issues/new) Issue, 在此感谢您的贡献。
+本站收录所有作业问题与答案。答案系作者个人编写，如有错漏，请见谅。您也可以联系作者改正，或在本站的 [GitHub](https://github.com/misaka10987/efzgkb-g12-math) 页面 [创建](https://github.com/misaka10987/efzgkb-g12-math/issues/new) Issue, 在此感谢您的贡献。
 
 [前往](assignment) 收录作业的目录。
