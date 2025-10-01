@@ -1,6 +1,6 @@
 # 华师大二附中国际课程班高三数学
 
-本站是由 [misaka10987](mailto:misaka10987@outlook.com) （前往 [个人主页](https://misaka10987.github.io) ）维护的华师大二附中国际课程班高三数学资料集合。该课程系指目前 (2025) 由 *陈超* 博士教授的，以线性代数为主题，在课程表上显示为「数学」的课程。
+本站是由 [misaka10987](mailto:misaka10987@outlook.com) （前往 [个人主页](https://misaka10987.pages.dev) ）维护的华师大二附中国际课程班高三数学资料集合。该课程系指目前 (2025) 由 *陈超* 博士教授的，以线性代数为主题，在课程表上显示为「数学」的课程。
 
 作者是 2026 届学生。本站随作者修习此课的过程更新，并预计在作者毕业时完成。此后，作者有计划持续维护本站直到此课不再开设。
 
@@ -8,6 +8,6 @@
 
 ## 作业
 
-本站收录所有作业问题与答案。答案系作者个人编写，如有错漏，请见谅。您也可以联系作者改正，或在本站的 [GitHub](https://github.com/misaka10987/site-efzgkb-g12-math) 页面 [创建](github.com/misaka10987/site-efzgkb-g12-math/issues/new) Issue, 在此感谢您的贡献。
+本站收录所有作业问题与答案。答案系作者个人编写，如有错漏，请见谅。您也可以联系作者改正，或在本站的 [GitHub](https://github.com/misaka10987/efzgkb-g12-math) 页面 [创建](github.com/misaka10987/efzgkb-g12-math/issues/new) Issue, 在此感谢您的贡献。
 
 [前往](assignment) 收录作业的目录。
