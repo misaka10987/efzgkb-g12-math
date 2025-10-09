@@ -25,3 +25,11 @@ Homework 8
    (2) Inverse.
    
    (3) $(AB)^* = BA$ .
+
+## Optional
+
+1. $(dx_1, dy_1, dp) = \begin{pmatrix} - \frac{\left( {R_1}\mathop{-}1\right) {R_2} \left( \alpha\mathop{-}1\right) \alpha d {e_2}}{{R_2} \alpha\mathop{-}{R_1} \alpha\mathop{+}{R_1}}\\
+   -\frac{{R_2} \alpha \left( {R_1} \alpha\mathop{-}\alpha\mathop{-}{R_1}\right) d {e_2}}{{R_2} \alpha\mathop{-}{R_1} \alpha\mathop{+}{R_1}}\\
+   -\frac{{R_1} {R_2} \alpha d {e_2}}{\left( \alpha\mathop{-}1\right) \, \left( {R_2} \alpha\mathop{-}{R_1} \alpha\mathop{+}{R_1}\right) }\end{pmatrix}$ .
+   
+   If $de_2 > 0$ , then $dy_1 > 0$ and $dp > 0$ .
