@@ -1,0 +1,183 @@
+\documentclass[aspectratio=169]{ctexbeamer}
+
+\usepackage{hyperref}
+
+\usetheme{Berkeley}
+\usefonttheme[onlymath]{serif}
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\msg}[1]{\; \text{#1} \;}
+\newcommand{\st}{\msg{s.t.}}
+\newcommand{\rank}{\operatorname{rank}}
+\newcommand{\im}{\operatorname{im}}
+
+\newcommand{\tb}[1]{\ \textbf{#1}\ }
+
+\title{秩零度定理}
+\subtitle{数学课堂演讲}
+\author{苏健坤 \and 陈宇翔 \and 贺致远}
+\institute{华东师范大学第二附属中学}
+\date{\today}
+
+\AtBeginSection[]{
+	\begin{frame}
+		\frametitle{\insertsectionhead}
+		\tableofcontents[currentsection, hideallsubsections]
+	\end{frame}
+}
+
+\begin{document}
+
+	\begin{frame}
+		\titlepage
+	\end{frame}
+
+	\begin{frame}{目录}
+		\tableofcontents
+	\end{frame}
+
+	\section{秩零度定理}
+	
+	\begin{frame}{一些关于矩阵的结论}
+		对于矩阵 $A: \R^{m \times n}$
+		\begin{itemize}
+			\item $\dim(\operatorname{Col} A) = \rank A$
+			\item $\dim(\operatorname{Row} A) = \rank A$
+			\item $\dim(\operatorname{Null} A) = n - \rank A$
+			\item $\dim(\operatorname{Null} A^\mathrm T) = m - \rank A$
+		\end{itemize}
+	\end{frame}
+	
+	\begin{frame}{秩零度定理}
+		去掉关于 $A^\mathrm T$ 的结论，可以得到
+		\begin{theorem}[秩零度定理]
+			$$
+			A: \R^{m \times n},\, \rank A + \operatorname{nullity} A = n
+			$$
+		\end{theorem}
+	\end{frame}
+
+	\section{推广形式}
+	
+	\begin{frame}{矩阵与线性变换}
+		矩阵 $A: \R^{m \times n}$ 可以看作线性变换
+		
+		$$
+		f_A: \R^n \to \R^m = \mathbf x \mapsto A \mathbf x
+		$$
+		
+		\begin{itemize}
+			\item 矩阵乘法对应线性变换的复合
+			\item 零空间对应核 $\ker f_A$
+			\item 列空间对应像 $\im f_A$
+		\end{itemize}
+	\end{frame}
+	
+	\begin{frame}{线性代数基本定理}
+		\begin{theorem}[线性代数基本定理]
+			设 $V,W$ 是向量空间，$A: V \to W$ 为线性变换，则
+			$$
+			\dim(\im A) + \dim(\ker A) = \dim V
+			$$
+		\end{theorem}
+		定义域的维度等于像的维度加上核的维度。
+	\end{frame}
+
+	\section{证明}
+	
+	\begin{frame}{思路}
+		\begin{theorem}[线性代数基本定理]
+			设 $V,W$ 是向量空间，$A: V \to W$ 为线性变换，则
+			$$
+			\dim(\im A) + \dim(\ker A) = \dim V
+			$$
+		\end{theorem}
+		\begin{itemize}
+			\item $\ker A$ 的元素都映到 $\mathbf 0_W$，对 $\dim(\im A)$ 没有贡献
+			\item 把 $\ker A$ 去掉
+			\item 剩下的空间线性同构
+		\end{itemize}
+	\end{frame}
+	
+	\begin{frame}{商空间}
+		\begin{lemma}
+			设 $V$ 是向量空间，$W$ 是 $V$ 的子空间，则
+			$$
+			\dim(V / W) = \dim V - \dim W
+			$$
+		\end{lemma}
+		
+		\begin{itemize}
+			\item $\dim(\im A) + \dim(\ker A) = \dim V$
+			\item $\dim(\im A) = \dim (V / \ker A)$
+		\end{itemize}
+		
+	\end{frame}
+	
+	\begin{frame}{线性同构}
+		\begin{lemma}
+			设 $V, W$ 是向量空间
+			$$
+			V \cong W \iff \dim V = \dim W
+			$$
+		\end{lemma}
+		\begin{itemize}
+			\item $\im A \cong V / \ker A$
+		\end{itemize}
+	\end{frame}
+	
+	\begin{frame}{构造线性变换}
+		定义
+		$$
+		T : V / \ker A \to \im A = [\mathbf v] \mapsto A(\mathbf v)
+		$$
+		并证明
+		\begin{itemize}
+			\item 良定义性
+			\item 双射
+			\item 线性性
+		\end{itemize}
+		
+		因此 $\im A \cong V / \ker A$ .
+		
+	\end{frame}
+
+	\section{直观理解}
+
+	\begin{frame}{信息角度}
+		
+	我们有线性变换 $T: \mathbb F^n \to \mathbb F^m$
+		
+	\begin{itemize}
+		\item 输入的信息：$n$ 个
+		\item 输出的信息：$m$ 个
+		\item $\ker T$ 被「摧毁」了
+	\end{itemize}
+
+	\end{frame}	
+
+	\begin{frame}{对偶}
+		\begin{theorem}[第一同构定理]
+			设 $G, H$ 是群，$f: G \to H$ 是同构，则
+			$$
+			G / \ker f \cong \im f
+			$$
+		\end{theorem}
+		
+		有一个叫作 \tb{同调代数} 的学科使用 \tb{阿贝尔范畴} 来统一刻画这些性质。
+		
+	\end{frame}
+	
+	\section{结尾}
+	
+	\begin{frame}{著作权信息}
+		此幻灯片的所有内容由作者通过
+		\href{https://creativecommons.org/licenses/by-nc-nd/4.0/}{知识共享许可署名—非商业性使用—禁止演绎 4.0 协议国际版}
+		授权发布。
+	\end{frame}
+	
+	\begin{frame}{谢谢}
+		\centering \Huge 谢谢
+	\end{frame}
+
+\end{document}
